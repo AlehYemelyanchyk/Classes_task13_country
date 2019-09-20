@@ -1,5 +1,8 @@
 package by.epam.ayem.module4;
 
+/**
+ * @author Aleh Yemelyanchyk on 9/19/2019.
+ */
 /*3. Создать объект класса Государство, используя классы Область, Район, Город. Методы:
 вывести на консоль столицу, количество областей, площадь, областные центры.*/
 
@@ -36,18 +39,17 @@ public class CountryMain {
         minskRegion.setRegionalCenter(minsk);
 
         CountryService countryService = new CountryService();
-        countryService.addCountry(belarus);
-        countryService.addRegion(gomelRegion);
-        countryService.addRegion(grodnoRegion);
-        countryService.addRegion(minskRegion);
-        countryService.addRegion(mogilevRegion);
-        countryService.addRegion(vitebskRegion);
-        countryService.addRegion(brestRegion);
+        countryService.addRegion(gomelRegion,belarus);
+        countryService.addRegion(grodnoRegion,belarus);
+        countryService.addRegion(minskRegion,belarus);
+        countryService.addRegion(mogilevRegion,belarus);
+        countryService.addRegion(vitebskRegion,belarus);
+        countryService.addRegion(brestRegion,belarus);
 
 
         countryService.showCapital(belarus);
-        countryService.regionsAmount(belarus);
-        countryService.countArea(belarus);
+        countryService.showRegionsAmount(belarus);
+        countryService.showCountryArea(belarus);
         countryService.showRegionalCenters(belarus);
 
     }
