@@ -1,19 +1,20 @@
-package by.epam.ayem.module4;
+package by.epam.ayem.module4.model;
 
+
+/**
+ * @author Aleh Yemelyanchyk on 9/19/2019.
+ */
 /*3. Создать объект класса Государство, используя классы Область, Район, Город. Методы:
 вывести на консоль столицу, количество областей, площадь, областные центры.*/
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class Country {
+public class District {
 
     private String name;
-    private List<Region> regions;
+    private Region region;
 
-    public Country(String name) {
+    public District(String name, Region region) {
         this.name = name;
-        this.regions = new ArrayList<>();
+        this.region = region;
     }
 
     public String getName() {
@@ -24,11 +25,11 @@ public class Country {
         this.name = name;
     }
 
-    public List<Region> getRegions() {
-        return regions;
+    public Region getRegion() {
+        return region;
     }
 
-    public void setRegions(List<Region> regions) {
-        this.regions = regions;
+    public void setRegion(Region region) {
+        this.region = region;
     }
 }
